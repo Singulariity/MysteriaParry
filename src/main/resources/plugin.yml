@@ -1,0 +1,5 @@
+name: MysteriaParry
+version: ${project.version}
+main: com.mysteria.parry.MysteriaParryPlugin
+api-version: 1.16
+authors: [ Singularity ]
