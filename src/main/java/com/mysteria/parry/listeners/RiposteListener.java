@@ -1,5 +1,6 @@
 package com.mysteria.parry.listeners;
 
+import com.mysteria.customapi.sounds.CustomSound;
 import com.mysteria.parry.MysteriaParryPlugin;
 import com.mysteria.parry.ParryManager;
 import com.mysteria.parry.events.RiposteEvent;
@@ -57,8 +58,8 @@ public class RiposteListener implements Listener {
 
 			int damageModifier = 0;
 			double damageMultiplier = 1.1;
-			// TODO
-			//CustomSound.play(victim.getLocation(), CustomSound.COMBAT_RIPOSTE, 0.8f, 1);
+
+			CustomSound.play(victim.getLocation(), CustomSound.COMBAT_RIPOSTE, 0.8f, 1);
 			victim.getWorld().playEffect(victim.getLocation().add(0, 1.3, 0), Effect.STEP_SOUND, Material.REDSTONE_BLOCK);
 
 			if (attacker instanceof Player) {

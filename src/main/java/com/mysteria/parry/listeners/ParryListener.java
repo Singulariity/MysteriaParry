@@ -1,5 +1,6 @@
 package com.mysteria.parry.listeners;
 
+import com.mysteria.customapi.sounds.CustomSound;
 import com.mysteria.parry.MysteriaParryPlugin;
 import com.mysteria.parry.ParryManager;
 import com.mysteria.parry.events.ParryEvent;
@@ -52,8 +53,7 @@ public class ParryListener implements Listener {
 
 			manager.addStaggered(attacker, 40);
 
-			// TODO
-			//CustomSound.play(attacker.getLocation(), CustomSound.COMBAT_PARRY, 0.8f, 1);
+			CustomSound.play(attacker.getLocation(), CustomSound.COMBAT_PARRY, 0.8f, 1);
 			if (attacker instanceof Player) {
 				((Player) attacker).getInventory().setHeldItemSlot(new Random().nextInt(9));
 			}

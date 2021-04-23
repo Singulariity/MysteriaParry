@@ -4,6 +4,7 @@ import com.mysteria.parry.MysteriaParryPlugin;
 import com.mysteria.parry.events.GuardBreakEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -59,7 +60,7 @@ public class GuardBreakListener implements Listener {
 
 			MysteriaParryPlugin.getInstance().getParryManager().addStaggered(victim, 40);
 
-			victim.getWorld().playSound(victim.getLocation(), "item.shield.break", 1, 0.6F);
+			victim.getWorld().playSound(victim.getLocation(), Sound.ITEM_SHIELD_BREAK, 1, 0.6F);
 			victim.setCooldown(Material.SHIELD, 100);
 
 			ItemStack mainHandItem = victim.getInventory().getItemInMainHand();
